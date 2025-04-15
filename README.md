@@ -12,8 +12,9 @@
 `npm start`
 
 5. Ouvrir `http://localhost:3000` dans un navigateur.
-
 ## Structure du projet
+
+```
 public/
 ├── assets/
 │   ├── images/
@@ -32,8 +33,9 @@ public/
 │   ├── 400.html
 │   └── 404.html
 └── index.html
-server.js # API Node.js/Express
-package.json # Dépendances
+server.js       # API Node.js/Express
+package.json    # Dépendances
+```
 
 ## API Endpoints
 
