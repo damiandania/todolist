@@ -11,7 +11,7 @@ let tasks = [
 
 // Middleware
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/../public'));
 
 // Routes API
 app.get('/tasks', (req, res) => res.json(tasks));
@@ -53,11 +53,11 @@ app.delete('/tasks/:id', (req, res) => {
 });
 
 app.post('/error', (req, res) => {
-	res.status(400).sendFile(__dirname + '/public/errors/400.html')
+	res.status(400).sendFile(__dirname + '/../public/errors/400.html');
 });
 
 app.use((req, res) => {
-	res.status(404).sendFile(__dirname + '/public/errors/404.html')
+	res.status(404).sendFile(__dirname + '/../public/errors/404.html');
 });
 
 // Démarrage du serveur
